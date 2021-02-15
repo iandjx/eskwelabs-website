@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: eskwelabs-web
-          image: 839343020172.dkr.ecr.ap-southeast-1.amazonaws.com/eskwelabs-web:1.2.2
+          image: 839343020172.dkr.ecr.ap-southeast-1.amazonaws.com/eskwelabs-web:1.5.6
           imagePullPolicy: Always
           env:
             - name: NEXT_PUBLIC_SIGN_UP_HOST
@@ -41,7 +41,7 @@ metadata:
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:ap-southeast-1:839343020172:certificate/8ea35822-f6f1-454b-8050-439949e2a67b
     service.beta.kubernetes.io/aws-load-balancer-backend-protocol: http
-    ingress.kubernetes.io/force-ssl-redirect: 'true'
+    ingress.kubernetes.io/force-ssl-redirect: "true"
 spec:
   ports:
     - name: https
